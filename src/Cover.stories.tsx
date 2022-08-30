@@ -1,3 +1,4 @@
+import type { ComponentProps } from 'react';
 import { Cover } from './Cover';
 
 export default {
@@ -27,3 +28,17 @@ export function Example(): JSX.Element {
     </div>
   );
 }
+
+export function Controllable(props: ComponentProps<typeof Cover>): JSX.Element {
+  return (
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
+      <Cover {...props} />
+    </div>
+  );
+}
+
+Controllable.bind({});
+Controllable.args = {
+  title: 'Fire and Night',
+  authors: ['Rainis'],
+};
