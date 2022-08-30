@@ -1,24 +1,19 @@
-# React with Bun runtime
+# Covers by ReadShape
 
-This is a React project bootstrapped with [bun](https://bun.sh/).
+## Summary
 
-## Getting Started
+### What is this?
 
-### Cloning the repo
+So. Books have covers, right? Well, yes, but actually no.
 
-```sh
-bun create react ./react-bun-app
-```
+Books are tricky business.
+If the book is self published then it might not have a cover or an ISBN.
+Other times a book might be incredibly old and never really had a cover to begin with.
 
-### Development
+### How this helps with it?
 
-First, run the development server.
+No one is going to make covers for these books, but that doesn't mean we can just leave them naked & coverless.
+We want to create a beautiful UI so we have to show _something_.
 
-```
-bun dev
-```
-
-Open http://localhost:3000 with your browser to see the result.
-
-You can start editing the page by modifying src/App.jsx. The page auto-updates as you edit the file.
-
+So that is what we do. We will, given the same input arguments, always create the same cover on the fly.
+It will obviously not be a "real" cover, but it's better than nothing or just a gray cover.
