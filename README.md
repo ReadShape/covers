@@ -41,7 +41,7 @@ There are the following patterns we can draw.
   - Circle
   - Waves
 
-Here are some outcomes:
+### Outcomes
 ![Zeit zu leben und Zeit zu sterben](https://i.imgur.com/osw5MWb.png)
 ![Letters from a Stoic](https://i.imgur.com/j9iqd3T.png)
 ![The Wonderful Wizzard of Oz](https://i.imgur.com/m6xrHVU.png)
