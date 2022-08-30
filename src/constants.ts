@@ -1,16 +1,23 @@
 import type { Font } from './types';
 
-export const cover = {
+type Cover = {
+  width: number;
+  height: number;
+};
+
+export const cover: Cover = {
   width: 240,
   height: 360,
 };
 
-export const details: {
+type Details = {
   title: Font;
   author: Font;
   gap: number;
   padding: number;
-} = {
+};
+
+export const details: Details = {
   title: {
     fontSize: 24,
     fontFamily: 'sans-serif',

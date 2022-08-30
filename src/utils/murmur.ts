@@ -1,3 +1,4 @@
+/* eslint-disable */
 export function murmur(key: string, seed?: number) {
   var keyLength: number,
     tailLength: number,

@@ -1,4 +1,4 @@
-import { Font } from '../types';
+import type { Font } from '../types';
 
 export type Line = {
   text: string;
@@ -70,8 +70,8 @@ export function getWrappedText(
 export function drawWrappedLines(
   ctx: CanvasRenderingContext2D,
   lines: Line[],
-  x: number = 0,
-  y: number = 0,
+  x = 0,
+  y = 0,
 ): void {
   lines.forEach(({ text, ...position }) => {
     ctx.fillText(text, position.x + x, position.y + y);
