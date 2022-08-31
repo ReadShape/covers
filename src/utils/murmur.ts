@@ -1,5 +1,5 @@
 /* eslint-disable */
-export function murmur(key: string, seed?: number) {
+export function murmur(key: string, seed: number = 0) {
   var keyLength: number,
     tailLength: number,
     bodyLength: number,

@@ -16,6 +16,8 @@ export function Cover({ title, authors }: CoverProps): JSX.Element {
     canvas.height = 360;
     const context = canvas.getContext('2d');
 
+    if (!context) return '';
+
     const str = `${title} ${authors.join(' ')}`;
     const hash = murmur(str);
 

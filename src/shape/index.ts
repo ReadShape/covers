@@ -148,7 +148,7 @@ export function createShapes(
   const columns = width / resolution;
   const rows = height / resolution;
 
-  const flow = [];
+  const flow: number[][] = [];
   const state = new Map<number, { x: number; angle: number }>();
 
   for (let x = 0; x < columns; x++) {

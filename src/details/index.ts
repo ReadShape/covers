@@ -24,6 +24,7 @@ function getPlacement(seed: number): Placement {
     case 8:
       return ['bottom', 'center'];
     case 9:
+    default:
       return ['bottom', 'right'];
   }
 }

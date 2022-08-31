@@ -32,7 +32,7 @@ export function getWrappedText(
     const metrics = ctx.measureText(state.line.join(' '));
 
     if (state.y > maxHeight) {
-      return;
+      return acc;
     }
 
     if (metrics.width > maxWidth && index > 0) {
