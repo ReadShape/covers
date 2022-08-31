@@ -49,5 +49,8 @@
     "prerelease": "bun run build && bun run lint",
     "preversion": "bun run prerelease",
     "prepublish": "bun run prerelease"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
