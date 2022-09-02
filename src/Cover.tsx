@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { createBase } from './base';
+import { cover } from './constants';
 import { createDetails } from './details';
 import { createShapes } from './shape';
 import { murmur } from './utils/murmur';
@@ -12,8 +13,8 @@ type CoverProps = {
 export function Cover({ title, authors }: CoverProps): JSX.Element {
   const data = useMemo(() => {
     const canvas = document.createElement('canvas');
-    canvas.width = 240;
-    canvas.height = 360;
+    canvas.width = cover.width;
+    canvas.height = cover.height;
     const context = canvas.getContext('2d');
 
     if (!context) return '';
@@ -26,7 +27,7 @@ export function Cover({ title, authors }: CoverProps): JSX.Element {
     const remainingEntropy = Math.floor(hash / 1000);
 
     context.beginPath();
-    context.rect(0, 0, 240, 360);
+    context.rect(0, 0, cover.width, cover.height);
     context.clip();
 
     createBase(context, hash, v1);
