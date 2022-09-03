@@ -34,3 +34,5 @@ yarn-error.log*
 
 /storybook-static
 /dist
+# local tests
+/src/Test.tsx

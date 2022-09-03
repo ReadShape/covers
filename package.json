@@ -1,7 +1,7 @@
 {
   "name": "@readshape/covers",
   "version": "1.0.0",
-  "description": "Library for generating unique, repeatable book covers on the fly",
+  "description": "A temporary publish of my fork of ReadShape/covers. Will remove if the authors wants so.",
   "homepage": "https://github.com/ReadShape/covers",
   "main": "dist/index.js",
   "files": [
@@ -12,43 +12,22 @@
     "react-dom": "^18.2.0",
     "web-vitals": "^2.1.4"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
   "devDependencies": {
     "@babel/core": "^7.18.10",
-    "@storybook/addon-actions": "^6.5.10",
-    "@storybook/addon-essentials": "^6.5.10",
-    "@storybook/addon-interactions": "^6.5.10",
-    "@storybook/addon-links": "^6.5.10",
-    "@storybook/builder-webpack4": "^6.5.10",
-    "@storybook/manager-webpack4": "^6.5.10",
-    "@storybook/react": "^6.5.10",
-    "@storybook/storybook-deployer": "^2.8.12",
-    "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.18",
-    "@typescript-eslint/eslint-plugin": "^5.36.1",
-    "@typescript-eslint/parser": "^5.36.1",
     "babel-loader": "^8.2.5",
-    "eslint": "^8.23.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.31.1",
     "prettier": "^2.7.1",
     "react-refresh": "0.10.0",
     "typescript": "latest"
   },
   "scripts": {
-    "lint": "eslint ./src",
-    "build": "rm -rf dist && tsc",
+    "build": "tsc",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "prerelease": "bun run build && bun run lint",
-    "preversion": "bun run prerelease",
-    "prepublish": "bun run prerelease"
+    "prerelease": "npm run build",
+    "preversion": "npm run prerelease",
+    "prepublish": "npm run prerelease"
   },
   "publishConfig": {
     "access": "public"

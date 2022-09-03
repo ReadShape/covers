@@ -10,6 +10,17 @@ Books are tricky business.
 If the book is self published then it might not have a cover or an ISBN.
 Other times a book might be incredibly old and never really had a cover to begin with.
 
+### This is a fork
+This is a simple fork that uses npm instead of bun.  
+The main cover component also accepts a className and style attributes now.  
+
+
+I also removed Storybook and ESLint.  
+This was mainly because i wasn't using them on my package, so i didn't want the extra dependencies.
+
+### Installing
+`npm i this-repo-url`
+
 ### How this helps with it?
 
 No one is going to make covers for these books, but that doesn't mean we can just leave them naked & coverless.
