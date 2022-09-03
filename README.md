@@ -48,6 +48,21 @@ Should it be empty, render nothing (`null`) instead.
 `cacheOptions: CacheOptions`: A object that describes the identifier and location used for saving and retrieving canvas dataURL from cache.
 Be sure to use the same options (identifier and location) for saving and when retrieving.
 
+The cache options are as follow:  
+`identifier?: string`: The identifier we will use to retrieve a cover from cache. 
+If it's undefined, we use a joined string of the title + authors array entries.  
+
+`storage: StorageOptions`: The storage option we want to use for saving the cover. Options are:  
+
+`indexeddb`: Uses the browser native indexeddb and the localforage async API.
+`localStorage`: Uses the browser native webStorage API and the localforage async API.
+`sessionStorage`: Uses the browser native webStorage API. It uses the default `window.sessionStorage`, so it's not async.  
+It's also not persistent, the data will be erased when the users end the browser session.
+
+If a identifier is present, all options use this key for retrieving and saving:  
+```javascript
+`${identifier}-canvas`
+```
 
 ## Examples
 
