@@ -4,3 +4,14 @@ export type Font = {
   fontWeight: string;
   fontColor: string;
 };
+
+export enum StorageOptions{
+  indexeddb = "INDEXEDDB",
+  localstorage = "LOCALSTORAGE",
+  sessionstorage = "SESSIONSTORAGE",
+}
+
+export type CacheOptions = {
+  identifier?: string;
+  storage: StorageOptions;
+}

@@ -1,1 +1,3 @@
-export { Cover } from './Cover';
+import {Cover} from './Cover';
+
+export default Cover

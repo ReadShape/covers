@@ -8,6 +8,7 @@
     "dist"
   ],
   "dependencies": {
+    "localforage": "^1.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "web-vitals": "^2.1.4"

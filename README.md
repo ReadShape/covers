@@ -43,7 +43,12 @@ The Cover component accepts the following properties:
 `classname?: string`: An optional CSS classname.  
 `style?: React.CSSProperties`: Optional CSS properties.
 `fallbackElement?: React.ReactNode`: Optional fallbackElement that is rendered while the component makes it's calculations. 
-Should it be empty, render nothing (`null`) instead.
+Should it be empty, render nothing (`null`) instead.  
+`cacheOptions: CacheOptions`: A object that describes the identifier and location used for saving and retrieving canvas dataURL from cache.
+Be sure to use the same options (identifier and location) for saving and when retrieving.
+
+
+
 
 
 
