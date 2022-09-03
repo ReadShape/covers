@@ -19,7 +19,7 @@ I also removed Storybook and ESLint.
 This was mainly because i wasn't using them on my package, so i didn't want the extra dependencies.
 
 ### Installing
-`npm i this-repo-url`
+`npm i https://github.com/Lamarcke/covers.git`
 
 ### How this helps with it?
 
