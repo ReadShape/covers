@@ -12,11 +12,20 @@ Other times a book might be incredibly old and never really had a cover to begin
 
 ### This is a fork
 This is a simple fork that uses npm instead of bun.  
+The main change on this fork is the fact that a `fallbackComponent` is rendered while the main component makes it's calculations.
 The main cover component also accepts a className and style attributes now.
 
 
-I also removed Storybook and ESLint.  
-This was mainly because i wasn't using them on my package, so i didn't want the extra dependencies.
+I've also removed some dependencies, just because i didn't want to work with them.
+
+### How this helps with it?
+
+No one is going to make covers for these books, but that doesn't mean we can just leave them naked & coverless.
+We want to create a beautiful UI so we have to show _something_.
+
+So that is what we do. We will, given the same input arguments, always create the same cover on the fly.
+It will obviously not be a "real" cover, but it's better than nothing or just a gray cover.
+
 
 ### Installing
 
@@ -26,14 +35,17 @@ there's credit to be given even when you have a MIT license.
 You can, however, install this using this repo url:
 `npm i https://github.com/Lamarcke/covers.git`
 
+### Props
+The Cover component accepts the following properties:
 
-### How this helps with it?
+`title: string`: A book's title, causes the pattern to change.  
+`authors: string[]`: A book's authors, causes the pattern to change.  
+`classname?: string`: An optional CSS classname.  
+`style?: React.CSSProperties`: Optional CSS properties.
+`fallbackElement?: React.ReactNode`: Optional fallbackElement that is rendered while the component makes it's calculations. 
+Should it be empty, render nothing (`null`) instead.
 
-No one is going to make covers for these books, but that doesn't mean we can just leave them naked & coverless.
-We want to create a beautiful UI so we have to show _something_.
 
-So that is what we do. We will, given the same input arguments, always create the same cover on the fly.
-It will obviously not be a "real" cover, but it's better than nothing or just a gray cover.
 
 ## Examples
 
