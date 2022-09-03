@@ -12,7 +12,8 @@ Other times a book might be incredibly old and never really had a cover to begin
 
 ### This is a fork
 This is a simple fork that uses npm instead of bun.  
-The main change on this fork is the fact that a `fallbackComponent` is rendered while the main component makes it's calculations.
+The main change on this fork is the fact that a `fallbackComponent` is rendered while the main component makes it's calculations, and we use localforage for caching
+purposes when needed.
 The main cover component also accepts a className and style attributes now.
 
 
@@ -46,10 +47,6 @@ The Cover component accepts the following properties:
 Should it be empty, render nothing (`null`) instead.  
 `cacheOptions: CacheOptions`: A object that describes the identifier and location used for saving and retrieving canvas dataURL from cache.
 Be sure to use the same options (identifier and location) for saving and when retrieving.
-
-
-
-
 
 
 ## Examples
