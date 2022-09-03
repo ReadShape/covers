@@ -19,11 +19,13 @@ I also removed Storybook and ESLint.
 This was mainly because i wasn't using them on my package, so i didn't want the extra dependencies.
 
 ### Installing
+
 I don't plan on publishing this to NPM because i removed a lot of stuff, and the original author did an awesome work and i believe
 there's credit to be given even when you have a MIT license.
 
-You can, however, install this using this repo url:  
-`npm i this-repo-url`
+You can, however, install this using this repo url:
+`npm i https://github.com/Lamarcke/covers.git`
+
 
 ### How this helps with it?
 
