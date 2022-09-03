@@ -12,13 +12,17 @@ Other times a book might be incredibly old and never really had a cover to begin
 
 ### This is a fork
 This is a simple fork that uses npm instead of bun.  
-The main cover component also accepts a className and style attributes now.  
+The main cover component also accepts a className and style attributes now.
 
 
 I also removed Storybook and ESLint.  
 This was mainly because i wasn't using them on my package, so i didn't want the extra dependencies.
 
 ### Installing
+I don't plan on publishing this to NPM because i removed a lot of stuff, and the original author did an awesome work and i believe
+there's credit to be given even when you have a MIT license.
+
+You can, however, install this using this repo url:  
 `npm i this-repo-url`
 
 ### How this helps with it?

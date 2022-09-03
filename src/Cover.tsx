@@ -9,9 +9,10 @@ type CoverProps = {
   title: string;
   authors: string[];
   className?: string;
+  style?: React.CSSProperties;
 };
 
-export function Cover({ title, authors, className }: CoverProps): JSX.Element {
+export function Cover({ title, authors, className, style }: CoverProps): JSX.Element {
   const data = useMemo(() => {
     const canvas = document.createElement('canvas');
     canvas.width = cover.width;
@@ -43,5 +44,5 @@ export function Cover({ title, authors, className }: CoverProps): JSX.Element {
     return canvas.toDataURL('image/png');
   }, [title, authors]);
 
-  return <img src={data} className={className}  />;
+  return <img src={data} className={className} style={style} />;
 }
