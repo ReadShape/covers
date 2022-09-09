@@ -22,7 +22,7 @@ export function Cover({ title, authors, className, style, fallbackElement, cache
     const location = cacheOptions?.storage
 
     const str = `${title} ${authors.join(' ')}`;
-    const identifier = `${cacheIdentifier ? cacheIdentifier : str}-canvas`
+    const identifier = `${cacheIdentifier ? cacheIdentifier : str}`
 
 
     // Tries to get a canvas from cache if one is specified
@@ -30,7 +30,7 @@ export function Cover({ title, authors, className, style, fallbackElement, cache
         if (location){
             if (location === StorageOptions.indexeddb || location === StorageOptions.localstorage){
                 const ls = localforage.createInstance({driver: location})
-                return await ls.getItem<string | null>(identifier)
+                return ls.getItem<string | null>(identifier)
             } else {
                 return window.sessionStorage.getItem(identifier)
             }

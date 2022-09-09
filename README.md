@@ -61,7 +61,12 @@ It's also not persistent, the data will be erased when the users end the browser
 
 If a identifier is present, all options use this key for retrieving and saving:  
 ```javascript
-`${identifier}-canvas`
+`${identifier}`
+```
+
+If not:
+```javascript
+`${title} ${authors.join(' ')}`
 ```
 
 ## Examples
