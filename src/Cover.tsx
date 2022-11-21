@@ -1,3 +1,4 @@
+import type { ImgHTMLAttributes } from 'react';
 import { useMemo } from 'react';
 import { createBase } from './base';
 import { cover } from './constants';
@@ -5,12 +6,18 @@ import { createDetails } from './details';
 import { createShapes } from './shape';
 import { murmur } from './utils/murmur';
 
+type ImageProps = Omit<ImgHTMLAttributes<HTMLImageElement>, 'src' | 'srcSet'>;
+
 type CoverProps = {
   title: string;
   authors: string[];
-};
+} & ImageProps;
 
-export function Cover({ title, authors }: CoverProps): JSX.Element {
+export function Cover({
+  title,
+  authors,
+  ...imageProps
+}: CoverProps): JSX.Element {
   const data = useMemo(() => {
     const canvas = document.createElement('canvas');
     canvas.width = cover.width;
@@ -42,5 +49,5 @@ export function Cover({ title, authors }: CoverProps): JSX.Element {
     return canvas.toDataURL('image/png');
   }, [title, authors]);
 
-  return <img src={data} />;
+  return <img {...imageProps} src={data} />;
 }
