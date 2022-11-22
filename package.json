@@ -1,6 +1,6 @@
 {
   "name": "@readshape/covers",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Library for generating unique, repeatable book covers on the fly",
   "homepage": "https://github.com/ReadShape/covers",
   "main": "dist/index.js",
