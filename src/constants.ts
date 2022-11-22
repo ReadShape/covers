@@ -30,6 +30,6 @@ export const details: Details = {
     fontWeight: 'normal lighter',
     fontColor: '#2a2e36',
   },
-  gap: 2,
+  gap: 4,
   padding: 20,
 };

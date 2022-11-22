@@ -29,12 +29,12 @@ function getPlacement(seed: number): Placement {
   }
 }
 
-function getY(placement: VPlacement, offset: number): number {
+function getY(placement: VPlacement, start: number, offset: number): number {
   switch (placement) {
     case 'top':
-      return offset - details.padding;
+      return offset + details.padding;
     case 'bottom':
-      return cover.height - offset + details.padding;
+      return start + offset + details.padding;
   }
 }
 
@@ -93,19 +93,18 @@ export function createDetails(
     wrappedAuthor.offset;
   const isTopPlacement = placement[0] === 'top';
 
+  ctx.textBaseline = 'bottom';
   ctx.fillStyle = details.title.fontColor;
   ctx.font = getFontStyle(details.title);
+
+  const startY = isTopPlacement ? height : 0;
+  const endY = isTopPlacement ? cover.height : cover.height - height;
 
   drawWrappedLines(
     ctx,
     wrappedTitle.lines,
     getX(placement[1]),
-    getY(
-      placement[0],
-      isTopPlacement
-        ? height - wrappedTitle.offset
-        : height - wrappedAuthor.offset,
-    ),
+    getY(placement[0], endY, details.title.fontSize),
   );
 
   ctx.fillStyle = details.author.fontColor;
@@ -117,14 +116,13 @@ export function createDetails(
     getX(placement[1]),
     getY(
       placement[0],
-      isTopPlacement
-        ? height + details.gap
-        : height - wrappedTitle.offset - details.gap - wrappedAuthor.offset,
+      endY,
+      details.gap + wrappedTitle.offset + details.author.fontSize,
     ),
   );
 
   return [
-    [0, isTopPlacement ? height : 0],
-    [cover.width, isTopPlacement ? cover.height : cover.height - height],
+    [0, startY],
+    [cover.width, endY],
   ];
 }
